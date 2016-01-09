@@ -60,7 +60,7 @@ func runCmdUp(cmd *cobra.Command, args []string) {
 		os.Exit(1)
 	}
 
-	artifactsDir, err := filepath.Abs(path.Join("artifacts"))
+	artifactsDir, err := filepath.Abs(cfg.ArtifactPath)
 	if err != nil {
 		stderr("Unable to expand artifacts directory to absolute path: %v", err)
 		os.Exit(1)
